@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+
+import ReactHlsPlayer from "react-hls-player";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ReactHlsPlayer
+        // url="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        url={`http://localhost:22667/feeds/foo-bar/playlist.m3u8`}
+        autoplay={false}
+        controls={true}
+        />
     </div>
   );
 }
